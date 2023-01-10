@@ -1,0 +1,16 @@
+.checkConnection.show {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 150px;
+    background-color: beige;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkConnection.hidden{
+    visibility: hidden;
+}

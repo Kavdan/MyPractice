@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+hr {
+    height:1px;
+    width: 100%;
+    background: gray;
+}
+p, h1 {
+    color: white;
+}
+.piano {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: black;
+}
+.piano--settings {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.piano--volume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano--keysShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano--keysShow input {
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 30px;
+    position: relative;
+}
+
+.piano--keysShow input::before {
+    content: "";
+    height: 25px;
+    width: 25px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 3px;
+    border-radius: 50px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.piano--keysShow input:checked::before{
+    left: 32px;
+}
+
+.key.hide span {
+    display: none;
+}
+
+p {
+    font-size: 17px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+.piano--keys {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
+}
+.key {
+    list-style: none;
+    width: 80px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.key span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.blackKey:active {
+    box-shadow: 0px -5px 10px 2px rgba(255, 255, 255, 0.1) inset;
+}
+
+.blackKey.active {
+    box-shadow: 0px -5px 10px 2px rgba(255, 255, 255, 0.1) inset;
+}
+
+.whiteKey:active {
+    box-shadow: 0px -9px 15px 8px rgba(0, 0, 0, 0.6) inset;
+}
+
+.whiteKey.active {
+    box-shadow: 0px -9px 15px 8px rgba(0, 0, 0, 0.6) inset;
+}
+
+
+.blackKey {
+    height: 125px;
+    margin-left: -25px;
+    margin-right: -25px;
+    width: 50px;
+    background: black;
+    z-index: 1;
+}
+
+.blackKey span {
+    color: white;
+}
+
+.whiteKey {
+    background-color:antiquewhite;
+}
+
