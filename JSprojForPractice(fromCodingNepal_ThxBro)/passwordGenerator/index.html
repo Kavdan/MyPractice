@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="paswGenerator">
+        <h1 class="paswGenerator--title">Password Generator</h1>
+        <div class="paswGenerator--paswOutput">
+            <input type="text" class="wrapper--paswLine" id="" value="" readonly>
+            <img src="./free-icon-paste-4279694.png" alt="copyPasw" class="paswGenerator--bufferPasw">
+        </div>
+        <div class="paswGenerator--paswStrength">
+            <div id="colorRangePaswStrength"></div>
+        </div>
+        <div class="paswGenerator--paswLength">
+            <div class="paswLenTitle">
+                <h1>Password Length</h1>
+                <span class="paswSymbCount">15</span>
+            </div>
+            <input type="range" max="30" value="15" step="1" class="paswGenerator--paswLenSlider">
+        </div>
+        <div class="paswGenerator--paswSettings">
+            <ul class="paswGenerator--settingsList">
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id='lowercase' class="paswGenerator--lowerCase ch" checked>
+                    <h2>Lowercase(a-z)</h2>
+                </li>
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id="uppercase" class="paswGenerator--upperCase ch">
+                    <h2>UpperCase(A-Z)</h2>
+                </li>
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id="numbers" class="paswGenerator--numbers ch">
+                    <h2>Numbers(0-9))</h2>
+                </li>
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id="symbols" class="paswGenerator--symbols ch">
+                    <h2>Symbols(!-&^+@)</h2>
+                </li>
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id="excludeduplicate" class="paswGenerator--excludeDuplicate ch">
+                    <h2>Exclude Duplicate</h2>
+                </li>
+                <li class="paswGenerator--settingOption">
+                    <input type="checkbox" id="includespaces" class="paswGenerator--includeSpaces ch">
+                    <h2>Include Spaces</h2>
+                </li>
+            </ul>
+        </div>
+        <div class="btnFlex">
+        <button class="paswGenerator--paswGenerateBtn">generate password</button>
+        </div>
+    </div>
+</body>
+</html>

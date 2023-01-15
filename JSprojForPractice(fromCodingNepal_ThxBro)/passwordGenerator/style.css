@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(1, 144, 247);
+}
+
+.paswGenerator {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    padding: 20px;
+    height: 430px;
+    border-radius: 20px;
+    background: white;
+}
+
+h1, h2 {
+    font-size: 15px;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+    display: flex;
+    gap: 10px;
+    width: calc(100% / 2 - 10px);
+}
+
+li:first-child {
+    pointer-events: none;
+}
+
+li:first-child input {
+    opacity: 0.6;
+}
+
+.paswGenerator--paswGenerateBtn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    background: rgb(1, 144, 247);
+    border: none;
+}
+
+.paswGenerator--paswGenerateBtn:hover {
+    background: rgb(3, 107, 181);
+    cursor: pointer;
+}
+
+.ch {
+    cursor: pointer;
+}
+
+.paswGenerator--paswLenSlider {
+    width: 100%;
+    cursor: pointer;
+}
+
+.paswGenerator--paswStrength{
+    border: 1px solid rgba(191, 189, 189, 0.815);
+    border-radius: 5px;
+}
+.paswGenerator--paswStrength div {
+    height: 6.5px;
+    border-radius: 5px;
+    width: 0%;
+}
+
+.paswGenerator--paswOutput {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    border: .5px solid rgba(191, 189, 189, 0.815);
+    border-radius: 5px;
+}
+
+.paswGenerator--paswOutput input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.paswGenerator--title {
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+li h2 {
+    font-weight: 500;
+}
+
+.paswLenTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paswLenTitle span {
+    border: 1px solid rgba(191, 189, 189, 0.815);
+    padding: 5px;
+    border-radius: 100px;
+}
+
+#colorRangePaswStrength.red {
+    background: red;
+    width: 25%;
+}
+
+#colorRangePaswStrength.yellow {
+    background: yellow;
+    width: 50%;
+}
+
+#colorRangePaswStrength.orange {
+    background: orange;
+    width: 75%;
+}
+
+#colorRangePaswStrength.green {
+    background: green;
+    width: 100%;
+}
+
