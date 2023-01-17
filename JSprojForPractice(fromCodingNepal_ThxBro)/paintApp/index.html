@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="settings">
+            <section name="" id="" class="tools-board">
+                <div class="row">
+                    <label for="" class="title">Shapes</label>
+                    <ul class="options">
+                        <li class="option tool" id="rectangle">
+                            <img src="./icons/rectangle.svg" alt="">
+                            <span>Rectangle</span>
+                        </li>
+                        <li class="option tool" id="circle">
+                            <img src="./icons/circle.svg" alt="">
+                            <span>Circle</span>
+                        </li>
+                        <li class="option tool" id="triangle">
+                            <img src="./icons/triangle.svg" alt="">
+                            <span>Triangle</span>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" name="" id="fill-color">
+                            <label for="fill-color">Fill color</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <label for="" class="title">Options</label>
+                    <ul class="options">
+                        <li class="option tool" id="brush">
+                            <img src="./icons/brush.svg" alt="">
+                            <span class="active">Brush</span>
+                        </li>
+                        <li class="option tool" id="eraser">
+                            <img src="./icons/eraser.svg" alt="">
+                            <span>Eraser</span>
+                        </li>
+                        <li class="option">
+                            <input type="range" name="" id="size-slider" min="1" max="10" step="1">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row colors">
+                    <label for="" class="title">Colors</label>
+                    <ul class="options">
+                        <li class="option selected"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option" style="overflow: hidden;">
+                            <input type="color" name="" id="colorPicker" value="#0e2a0a">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <button class="clear-canvas">Clear canvas</button>
+                    <button class="save-image">Save as image</button>
+                </div>
+            </section>
+        </div>
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+    </div>
+</body>
+
+</html>

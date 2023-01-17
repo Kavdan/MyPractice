@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+    max-width: 1050px;
+    height: 500px;
+    gap: 20px;
+}
+
+.settings {
+    background: aliceblue;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.drawing-board {
+    max-width: 100%;
+    min-width: 500px;
+    background: white;
+    border-radius: 20px;
+}
+
+.title {
+    font-size:18px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#fill-color {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+img {
+    width: 16px;
+    height: 16px;
+}
+
+label[for="fill-color"] {
+    margin-left: 10px;
+}
+
+li span {
+    margin-left: 10px;
+}
+
+.row:has(button) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button.clear-canvas  {
+    border: 1px solid gray;
+}
+
+button.save-image {
+    background: blue;
+    color: aliceblue;
+}
+
+.colors ul {
+    display: flex;
+    gap: 5px;
+}
+
+.colors ul li {
+    position: relative;
+    background-color: #0e2a0a;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.colors ul li:nth-child(1) {
+    background-color: gray;
+}
+
+.colors ul li:nth-child(2) {
+    background-color: red;
+}
+
+.colors ul li:nth-child(3) {
+    background-color: rgb(40, 45, 185);
+}
+
+.colors ul li:nth-child(4) {
+    background-color: rgb(255, 242, 0);
+}
+
+.colors ul li.selected::before {
+    position: absolute;
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid white;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.option:has(img) span:hover {
+    color:rgb(76, 76, 255);
+    cursor: pointer;
+}
+
+.option:has(img) span.active {
+    color:rgb(76, 76, 255);
+    cursor: pointer;
+}
+
+img:hover {
+    fill:rgb(76, 76, 255);
+    cursor: pointer;
+}
+
+:where(input[type='checkbox']:hover, .option:has(#fill-color) label:hover) {
+    color: rgb(76, 76, 255);
+    cursor: pointer;
+}
+
+label, span {
+    user-select: none;
+}
+
+#colorPicker {
+    cursor: pointer;
+    opacity: 0;
+}
+
+
