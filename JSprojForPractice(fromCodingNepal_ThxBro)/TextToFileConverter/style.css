@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(84, 144, 249);
+}
+
+.converter {
+    width: 500px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: rgb(210, 210, 210);
+}
+
+.select {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.write {
+    height: 75%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.write textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+}
+
+select, input {
+    border: none;
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+select {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.converter {
+    position: relative;
+}
+
+button{
+    margin-left: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+button:active {
+    border: 1px solid black;
+}
+
+
+button:last-child {
+    margin-left: 120px;
+}
