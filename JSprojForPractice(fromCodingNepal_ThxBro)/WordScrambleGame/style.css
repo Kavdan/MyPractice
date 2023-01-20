@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:#5271E8;
+}
+h1, p {
+    user-select: none;
+}
+.game {
+    background: #ffffff;
+    padding: 20px;
+    height: 450px;
+    border-radius: 10px;
+    min-width: 520px;
+}
+
+.title {
+    font-size: 25px;
+    border-bottom: 1px solid #53595F;
+    margin: 0;
+}
+
+.ScrambledWord {
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.inp {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: large;
+    border-radius: 5px;
+    outline: none;
+    margin: 15px auto; 
+}
+
+button {
+    padding: 15px;
+    width: 50%;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 5px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:first-child {
+    background: #53595F;
+}
+button:first-child:hover {
+    background: #43484d;
+}
+button:last-child {
+    background: #4765D1;
+}
+button:last-child:hover {
+    background: #314795;
+}
+.buttons {
+ display: flex;
+ gap: 10px;
+ justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+
+    .ScrambledWord {
+        font-size: 60px;
+        letter-spacing: 5px;
+    }
+
+    .game {
+        min-width: 300px;
+    }
+    
+}
+
+
+@media (max-width: 330px) {
+
+    .ScrambledWord {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    .game {
+        min-width: 200px;
+        height: 400px;
+    }
+
+    button {
+        padding: 5px;
+    }
+    
+}
+
+
