@@ -1,0 +1,158 @@
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.weatherInfo{
+    padding: 0 10% 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.weatherInfo--block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    margin-right: 10%;
+}
+.country {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.degreeIndicator {
+    font-size: 70px;
+    margin-left: -5px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.weatherInfoByTime {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.weaterInfoByTime--block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+}
+
+.weaterInfoByTime--block p {
+    font-size: 28px;
+}
+
+.extraInfoWeather {
+    background: #343A40;
+    min-height: 100px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.extraInfoWeather::before {
+    content: 'Now';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+}
+.extraInfo--block {
+    width: fit-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraInfo--block p {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.extraInfo--block p:first-child {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.extraInfo--block p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .weatherInfo {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .extraInfoWeather{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .extraInfo--block {
+        border-bottom: 1px solid white;
+        max-width: 40%;
+        min-width: 150px;
+    }
+    
+    .weatherInfo--block{
+        margin: 0px;
+    }
+}
+
+@media (max-width: 440px) {
+    .weatherInfoByTime{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .weaterInfoByTime--block {
+        border: 1px solid black;
+        background: rgb(254, 242, 242);
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .weaterInfoByTime--block:first-child {
+        margin-top: 50px;
+    }
+
+    .weatherInfo {
+        overflow: scroll;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .header--search {
+        width: 80%;
+    }
+
+    .weatherInfo--block{
+        border-bottom: 2px solid black;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+}

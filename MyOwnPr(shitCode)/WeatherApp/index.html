@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="weatherInfo.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="img/logo.svg" alt="" class="logo">
+            <div class="header--search">
+                <input type="text" name="" id="">
+                <div class="searchIcon">
+                    <img src="img/searchIcon.svg" alt="" class="searchIcon">
+                </div>
+            </div>
+            <div class="header--CFdeg">
+                <span class="Cdeg">°C</span>
+                <span class="separator">/</span>
+                <span class="Fdeg">°F</span>
+            </div>
+        </div>
+        <div class="weatherInfo">
+            <div class="weatherInfo--block">
+                <div class="weatherCountry">
+                    <p class="country">London</p>
+                    <p class="weekdayAndTime">
+                        <span class="weekday">Sunday</span>
+                        <span class="time">8:00</span>
+                    </p>
+                </div>
+                <p class="degreeIndicator">
+                </p>
+            </div>
+            <div class="weatherInfoByTime">
+                <div class="weaterInfoByTime--block" data-C="dkfs">
+                    <p class="time">8:00</p>
+                    <img src="./img/Rain.svg" alt="" class="stateOfWeather">
+                    <p class="weaterInfoByTime--degree">
+                        <span>13</span>
+                        <span class="degreeType">°C</span>
+                    </p>
+                </div>
+                <div class="weaterInfoByTime--block" data-C="dkfs">
+                    <p class="time">8:00</p>
+                    <img src="./img/Rain.svg" alt="" class="stateOfWeather">
+                    <p class="weaterInfoByTime--degree">
+                        <span>13</span>
+                        <span class="degreeType">°C</span>
+                    </p>
+                </div>
+                <div class="weaterInfoByTime--block" data-C="dkfs">
+                    <p class="time">8:00</p>
+                    <img src="./img/Rain.svg" alt="" class="stateOfWeather">
+                    <p class="weaterInfoByTime--degree">
+                        <span>13</span>
+                        <span class="degreeType">°C</span>
+                    </p>
+                </div>
+                <div class="weaterInfoByTime--block" data-C="dkfs">
+                    <p class="time">8:00</p>
+                    <img src="./img/Rain.svg" alt="" class="stateOfWeather">
+                    <p class="weaterInfoByTime--degree">
+                        <span>13</span>
+                        <span class="degreeType">°C</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="extraInfoWeather">
+            <div class="extraInfo--block">
+                <p class="typeOfForecast">Type: </p>
+                <p class="percent">Meaning: </p>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
