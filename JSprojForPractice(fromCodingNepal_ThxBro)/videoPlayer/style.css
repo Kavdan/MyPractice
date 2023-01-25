@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+video {
+    max-width: 900px;
+    width: 98%;
+}
+
+.container, .videoControls, .videoTimer, .optionsLeft, .optionsCenter, .optionsRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionsLeft {
+    margin-right: auto;
+    gap: 10px;
+}
+
+.optionsRight {
+    margin-left: auto;
+    gap: 10px;
+}
+
+.optionsCenter {
+    gap: 10px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+    width: 70px;
+    height: 3px;
+}
+
+img {
+    width: 20px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    /* overflow: hidden; */
+}
+.wrapper {
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    user-select: none;
+    background: rgba(172, 172, 172, 0.197);
+}
+
+.playbackContent {
+    position: relative;
+}
+
+.speedOptions{
+    opacity: 0;
+}
+
+.speedOptions {
+    transition: .4s;
+    visibility:hidden;
+    position: absolute;
+    top: -215px;
+    right: -35px;
+    background: white;
+    list-style: none;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.speedOptions.show {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}
+
+.speedOptions li {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.speedOptions li:hover{
+    background: rgb(219, 218, 218);
+}
+
+.speedOptions li.active {
+    background: rgb(31, 121, 255);
+    color: white;
+}
+
+.progressArea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.395);
+    position: relative;
+    transition: .1s;
+    height: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progressBar {
+    width: 0;
+    background: white;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.progressBar::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: white;
+    right: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.progressArea:hover {
+    height: 8px;
+    overflow:visible;
+}
+
+
+.progressArea span {
+    position: absolute;
+    top: -30px;
+    background: rgba(255, 255, 255, 0.557);
+    padding: 3px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper.hiden {
+    display: none;
+}

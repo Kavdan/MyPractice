@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <div class="container showControls">
+        <div class="wrapper hiden">
+            <div class="videoTimeline">
+                <div class="progressArea">
+                    <span>0:00</span>
+                    <div class="progressBar"></div>
+                </div>
+            </div>
+            <ul class="videoControls">
+                <li class="optionsLeft">
+                    <button><img src="./img/volume.svg" alt=""></button>
+                    <input type="range" name="" min="0" max="1" step="any" id="">
+                    <div class="videoTimer">
+                        <p class="currentTime">0:00</p>
+                    <p class="separator"> / </p>
+                    <p class="videoDuration">0:00</p>
+                    </div>
+                </li>
+                <li class="optionsCenter">
+                    <button class="skip-backward"><img src="./img/skipBackward.svg" alt=""></button>
+                    <button class="play-pause"><img src="./img/play-pause.svg" alt=""></button>
+                    <button class="skip-forward"><img src="./img/skipForward.svg" alt=""></button>
+                </li>
+                <li class="optionsRight">
+                    <div class="playbackContent">
+                        <button class="settings"><img src="./img/settings.svg" alt=""></button>
+                        <ul class="speedOptions">
+                            <li data-speed="2">2x</li>
+                            <li data-speed="1.5">1.5x</li>
+                            <li data-speed="1" class="active">1x</li>
+                            <li data-speed="0.75">0.75x</li>
+                            <li data-speed="0.5">0.5x</li>
+                        </ul>
+                    </div>
+                    <button class="picInPic" style="color: white;">pic in</button>
+                    <button class="fullScreen"><img src="./img/fullScreen.svg" alt=""></button>
+                </li>
+            </ul>
+        </div>
+        <video src="./X2Download.com-German Shepherd is Confused by the Meowing of a Tiny Kitten-(480p).mp4"></video>
+    </div>
+</body>
+</html>
