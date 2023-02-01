@@ -1,0 +1,80 @@
+body {
+    background: rgb(59, 157, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 300px;
+    height: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    gap: 5px;
+}
+
+li {
+    border: 1px solid rgb(134, 134, 134);
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(75, 59, 255);
+    user-select: none;
+}
+
+.gameInfo {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background: rgb(59, 157, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background:  rgb(48, 128, 209);
+}
+
+button:active {
+    background:  rgb(37, 98, 159);
+}
+
+hr {
+    background: rgb(127, 127, 127);
+    height: 1px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+p, h2 {
+    user-select: none;
+}
+
+.wrongLetters {
+    word-wrap: break-word;
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        width: 250px;
+    }
+}
