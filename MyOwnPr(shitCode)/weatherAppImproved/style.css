@@ -1,0 +1,145 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    margin-top: 25px;
+}
+
+.search--container {
+    position: relative;
+    width: fit-content;
+}
+
+.search-city {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-city input {
+    position: relative;
+    padding: 5px;
+    outline: none;
+}
+
+.search-city .input--icon {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+    color: #ccc;
+    padding-top: 5px;
+}
+
+.search-city .input--icon:hover {
+    color: black;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.weather-info .city-name {
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.weather-info .temperature {
+    font-size: 31px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+li {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% / 5 - 4px);
+}
+ 
+p, span, label, div {
+    user-select: none;
+}
+
+@media (max-width: 670px) {
+
+    li {
+        width: calc(100% / 3 - 4px);
+    }
+
+    .weather-info .city-name {
+        font-size: 25px;
+    }
+
+    .weather-info .temperature{
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 522px) {
+    
+    li {
+        width: calc(100% / 3 - 4px);
+    }
+}
+
+@media (max-width: 438px) {
+    li {
+        width: calc(100% / 2 - 4px);
+    }
+    .search-input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    li {
+        width: calc(100% - 4px);
+    }
+
+    .weather-info .city-name {
+        font-size: 20px;
+    }
+
+    .weather-info .temperature{
+        font-size: 26px;
+    }
+}
