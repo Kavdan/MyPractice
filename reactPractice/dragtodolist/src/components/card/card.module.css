@@ -1,0 +1,14 @@
+.card {
+    width: 200px;
+    height: 300px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card::-webkit-scrollbar { width: 0px; }
+
+.header {
+    padding: 10px 0;
+}
