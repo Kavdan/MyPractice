@@ -1,0 +1,71 @@
+body {
+    background: rgb(84, 142, 242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: rgb(251, 251, 251);
+    padding: 10px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.ul {
+    height: 180px;
+    list-style-type: none;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.li {
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.li:hover {
+    font-weight: 600;
+}
+
+.result {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultH {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+button {
+    padding: 10px;
+    width: 80%;
+    background: rgb(84, 142, 242);
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:active {
+    background: rgb(54, 93, 158);
+}
+
+h1, h2, button {
+    user-select: none;
+}
