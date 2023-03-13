@@ -1,0 +1,39 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .userImg, .AIImg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .user, .AI {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        user-select: none;
+    }
+}
+
+.choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    gap: 10px;
+
+    .choiceimg {
+        width: 20%;
+        cursor: pointer;
+        height: 150px;
+        &:hover {
+            border-bottom: 1px solid gray;
+        }
+        user-select: none;
+    }
+}
