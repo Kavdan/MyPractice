@@ -1,0 +1,15 @@
+.buttonDownload {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: rgb(0, 128, 197);
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background: rgb(0, 99, 152);
+    }
+}
