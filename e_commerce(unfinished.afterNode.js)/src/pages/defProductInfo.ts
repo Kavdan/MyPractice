@@ -1,0 +1,1 @@
+export {ProductInfo as default} from "../features/products/ProductInfo"

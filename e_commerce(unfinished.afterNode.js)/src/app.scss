@@ -1,0 +1,796 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    ul {
+        margin: 0;
+        padding: 0px;
+        list-style: none;
+    }
+}
+
+.App {
+    display: flex;
+}
+
+.leftMenuContainer {
+    padding: 0px 10px;
+    width: 45px;
+    height: 100vh;
+    box-shadow: -5px 0px 5px -5px rgba(34, 60, 80, 0.6) inset;
+
+    .menuItems {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+        
+            img {
+                width: 25px;
+            }
+            
+        }
+
+        li.active {
+            background: #ccc;
+
+            img {
+                fill: white;
+            }
+        }
+
+        .bagItem {
+            position: relative;
+
+            span {
+                position: absolute;
+                background: red;
+                padding: 3px;
+                color: white;
+                font-weight:bolder;
+                font-size: small;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                text-align: center;
+                bottom: 3px;
+                right: 0px;
+            }
+        }
+
+    }
+}
+
+
+.productListContainer {
+    padding: 10px;
+    width: 100%;
+    height: calc(100vh - 20px);
+    display: flex;
+    flex-direction: column;
+    .searchBlock {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+
+        .search {
+            display: flex;
+            gap: 10px;
+            border-radius: 20px;
+            padding: 5px;
+            width: 40%;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+
+            input {
+                border: none;
+                border-radius: inherit;
+                outline: none;
+                padding: 10px;
+                width: 100%;
+            }
+
+
+            .imgContainer {
+                transition: all .3s;
+                padding: 7px;
+                border-radius: 50%;
+                display: flex;
+                cursor: pointer;
+
+                &:hover {
+                    background: #ccc;
+                }
+            }
+        }
+    }
+
+    .productList {
+        margin-top: 10px;
+        height: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-right: 10px;
+        
+        .product {
+            cursor: pointer;
+            width: calc(100% / 4);
+            padding: 10px;
+            max-width: 200px;
+            height: 400px;
+            margin-top: 20px;
+            margin-left: 10px;
+
+            img {
+                width: 100%;
+                height: 50%;
+            }
+
+            .productName {
+                font-size:20px;
+                font-weight: 600;
+            }
+
+            .productColor {
+                color: #60695C;
+                margin-top: -15px;
+                font-size: 16px;
+            }
+
+            .price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .priceCount {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                button {
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 7px;
+
+                    &:hover {
+                        background: #60695C;
+                    }
+
+                    .toBag {
+                        fill: green;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 5px 17px 14px rgba(34, 60, 80, 0.2);
+
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px; /* ширина для вертикального скролла */
+            height: 4px; /* высота для горизонтального скролла */
+            background-color: white;
+        }
+        
+        /* ползунок скроллбара */
+        &::-webkit-scrollbar-thumb {
+            background-color: #696969;
+            border-radius: 9em;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #253861;
+        }
+    }
+}
+
+.productInfo {
+    padding: 10px;
+    height: calc(100vh - 20px);
+    overflow-y: scroll;
+    width: 100%;
+
+    .back {
+        font-size: 20px;
+        width: fit-content;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 700;
+        }
+    }
+    hr {
+        height: 3px;
+        background: #696969;
+        margin: 40px auto;
+    }
+    .productMainInfo {
+        display: flex;
+        gap: 30px;
+        
+
+        .images {
+            display: flex;
+            width: 60%;
+            gap: 30px;
+            padding: 20px;
+            height: auto;
+
+            .verticalImages {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                img {
+                    width: 50px;
+                    cursor: pointer;
+                }
+                
+            }
+
+            .currentImage {
+                width: 100%;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+
+        .info {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-size: 50px;
+                margin: 0;
+            }
+
+            .brand {
+                color: #1A1F1680;
+                font-size: 25px;
+                margin: 0;
+
+            }
+
+            .price {
+                margin: 0;
+                margin-top: 30px;
+                font-size: 25px;
+            }
+
+
+
+            .buttonBlock {
+                display: flex;
+                justify-content: flex-end;
+                height: 100%;
+
+                button {
+                    cursor: pointer;
+                    background: black;
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    align-self: flex-end;
+
+                    span {
+                        color: white;
+                        margin-left: 20px;
+                    }
+                }
+
+                button.added {
+                    background: #696969;
+                }
+            }
+        }
+    }
+}
+
+.bag{
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+
+    .checkout {
+        margin: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 5px;
+            color: white;
+            background: black;
+            border-radius: 10px;
+        }
+    }
+}
+
+.bagItem {
+    display: flex;
+    padding: 20px;
+    max-height: 300px;
+
+    .img {
+        width: 35%;
+        min-width: 35%;
+        margin-right: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        .title {
+            font-size: 25px;
+            margin-bottom: -15px;
+        }
+
+        .brand {
+            font-size: 20px;
+            color: #60695C;
+        }
+
+        .priceAndCount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         
+
+            .price {
+                font-size: 20px;
+            }
+
+            .count {
+                display: flex;
+                align-items: center;
+
+                span, button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    border-radius: 50%;
+                    background: 1px solid rgba(255, 255, 255, 0);
+                }
+
+                button {
+                    font-size: 20px;
+                    width: 20px;
+                    height: 20px;
+
+                    &.minus {
+                        color: red;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        border-color: 1px solid black;
+                    }
+                }
+
+                span {
+                    font-size: 20px;
+                    height: 20px;
+                }
+
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 5px 17px 14px rgba(34, 60, 80, 0.2);
+    }
+}
+
+
+.modalContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .modal {
+        min-width: 200px;
+        min-height: 200px;
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        max-height: 90vh;
+        z-index: 100;
+
+        button {
+            width: fit-content;
+            align-self: flex-end;
+            margin-bottom: 20px;
+            background: none;
+            border: 1px solid rgb(189, 189, 189);
+            border-radius: 10px;
+            padding: 3px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+.shippingData {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-transform: uppercase;
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    label {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .send {
+        padding: 5px;
+        text-transform: uppercase;
+        border: 1px solid rgba(0, 0, 0, 0);
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 0, 0);
+
+        &:active {
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+        }
+    }
+
+    
+}
+
+.orderInfo {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.signInContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    .signIn {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+        border-radius: 20px;
+        background: #dedede;
+        input {
+            padding: 8px;
+            outline: none;
+
+            border-radius: inherit;
+            border: none;
+            box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.15);
+            
+            &[type="submit"] {
+                cursor: pointer;
+                
+                &:active {
+                    background: #fff9f9;
+                }
+            }
+        }
+
+        
+    }
+}
+
+.placeOrder {
+    background: #dededd;
+    width: 100%;
+    height: calc(100vh - 20px);
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.shippingAddress, .paymentMethod {
+    padding: 10px 20px 20px 20px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        cursor: pointer;
+        height: fit-content;
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid black;
+
+        &:active {
+            background: white;
+        }
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    span {
+        color: #60695C;
+    }
+}
+
+.paymentMethod {
+    margin-top: 20px;
+    p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        span {
+            color: #60695C;
+        }
+    }
+}
+
+.bagReview {
+    height: fit-content;
+    border-radius: 20px;
+    background: white;
+    padding-bottom: 10px;
+    h1 {
+        padding-left: 20px;
+        padding-top: 25px;
+    }
+}
+
+.confirmOrder {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    p {
+        font-size: 18px;
+        display: flex;
+        gap: 10px;
+        color: #60695C;
+    }
+
+    span {
+        font-size: 18px;
+        color: black;
+    }
+
+    .orderTotal {
+        color: red;
+        font-size: 20px;
+        align-items: center;
+        span{
+            color: red;
+        }
+
+        border-top: 1px solid #60695C;
+        border-bottom: 1px solid #60695C;
+        padding: 10px 0;
+    }
+
+    button {
+        cursor: pointer;
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+
+        &:active {
+            background: rgb(37, 37, 37);
+        }
+    }
+}
+
+
+.addPaymentMethodContainer{
+    height: calc(100vh - 20px);
+    width: 100%;
+    background: #dededd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .listOfMethods {
+        background: white;
+        margin: 0 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 800px;
+        border-radius: 20px;
+    }
+
+    .addPaymentData{
+        background: white;
+        margin: 0 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 800px;
+        border-radius: 20px;
+
+        h1{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.2);
+            margin-top: 20px;
+            margin-left: -10px;
+
+        }
+
+        input[type="checkbox"] {
+            width: fit-content;
+            cursor: pointer;
+            margin-left: 0px;
+        }
+
+        .dataCvcContainer {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            span {
+                font-size: 35px;
+                margin-bottom: -10px;
+            }
+            
+            .cvc {
+                margin-right: -10px;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 7px;
+            color: white;
+            background: black;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.addAddressContainer {
+    height: calc(100vh - 20px);
+    width: 100%;
+    background: #dededd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    form {
+        background: white;
+        margin: 0 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 800px;
+        border-radius: 20px;
+
+        h1{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 4px 16px rgba(26, 31, 22, 0.2);
+            margin-top: 20px;
+            margin-left: -10px;
+
+        }
+
+        input[type="checkbox"] {
+            width: fit-content;
+            cursor: pointer;
+            margin-left: 0px;
+            margin-top: 0;
+        }
+
+        .checkBoxContainerAddress {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+
+        button {
+            width: 100%;
+            padding: 7px;
+            color: white;
+            background: black;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    }
+}
